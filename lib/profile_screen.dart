@@ -30,7 +30,7 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     backgroundImage: AssetImage(
-                      'assets/images/photo_6019316294077235608_x.jpg', // Use the actual user image URL
+                      'assets/images/photo_6019316294077235607_x.jpg', // Use the actual user image URL
                     ),
                     radius: 50,
                   ),

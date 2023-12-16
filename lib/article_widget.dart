@@ -11,18 +11,25 @@ class ArticleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Image.asset('assets/images/photo_6019316294077235608_x.jpg'),
-      title: Text(article.title),
-      subtitle: Text(article.body),
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => ArticleScreen(article: article),
-          ),
-        );
-      },
+    return Card(
+      elevation: 4,
+      margin: const EdgeInsets.all(40.0),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: ListTile(
+        leading: Image.asset('assets/images/photo_6019316294077235608_x.jpg'),
+        title: Center(child: Text(article.title)),
+        subtitle: Text(article.body),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ArticleScreen(article: article),
+            ),
+          );
+        },
+      ),
     );
   }
 }

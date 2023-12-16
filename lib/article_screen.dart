@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:medium/model.dart';
+import 'package:medium/profile_screen.dart';
 
 class ArticleScreen extends StatelessWidget {
   final Article article;
@@ -19,11 +20,12 @@ class ArticleScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            ProfileScreen(),
             Text(
               article.title,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 15),
             Text(
               article.body,
               style: TextStyle(fontSize: 18),
